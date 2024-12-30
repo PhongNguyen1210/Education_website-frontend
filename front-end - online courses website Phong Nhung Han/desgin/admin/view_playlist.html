@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
+<body>
+   <!---------------------------HEADER------------------------------->
+   <header class="header">
+   
+      <section class="flex">
+   
+         <a href="dashboard.html" class="logo">Admin</a>
+   
+         <form action="search_page.html" method="post" class="search-form">
+            <input type="text" name="search" placeholder="search here..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_btn"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fa-solid fa-circle-half-stroke"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="../images/aa.png" alt="Profile Image">
+            <h3>Teacher Phong Nhung Hân</h3>
+            <span>Web Developer</span>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+            
+         </div>
+   
+      </section>
+   
+   </header>
+
+<div class="side-bar">
+   
+   <div class="close-side-bar">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+         <img src="../images/aa.png" alt="Profile Image">
+         <h3>Teacher Phong Nhung Hân</h3>
+         <span>Web Developer</span>
+         <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="dashboard.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="playlists.html"><i class="fa-solid fa-bars-staggered"></i><span>playlists</span></a>
+      <a href="contents.html"><i class="fas fa-graduation-cap"></i><span>contents</span></a>
+      <a href="comments.html"><i class="fas fa-comment"></i><span>comments</span></a>
+      <a href="#" onclick="return confirm('logout from this website?');"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
+   </nav>
+
+</div>
+
+<section class="playlist-details">
+
+  <h1 class="heading">Playlist Details</h1>
+
+  <div class="row">
+    <div class="thumb">
+      <span>Total Videos</span>
+      <img src="../images/aa.png" alt="">  </div>
+    <div class="details">
+      <h3 class="title">Playlist Title</h3>
+      <div class="date"><i class="fas fa-calendar"></i><span>yy-mm-dd</span></div>
+      <div class="description">Playlist Description</div>
+      <form action="" method="post" class="flex-btn">
+        <input type="hidden" name="playlist_id" value="**playlist_id**"> <a href="update_playlist.html?get_id=**playlist_id**" class="option-btn">Update Playlist</a>
+        <input type="submit" value="Delete Playlist" class="delete-btn" onclick="return confirm('Delete this playlist?');" name="delete">
+      </form>
+    </div>
+  </div>
+
+</section>
+
+<section class="contents">
+
+  <h1 class="heading">Playlist Videos</h1>
+
+  <div class="box-container">
+
+    <div class="box">
+      <div class="flex">
+        <div><i class="fas fa-dot-circle" style="color: limegreen"></i><span style="color: limegreen">Video Status</span></div>
+        <div><i class="fas fa-calendar"></i><span>yy-mm-dd</span></div>
+      </div>
+      <img src="/front-end - online courses website/desgin/images/aa.png" class="thumb" alt="">  <h3 class="title">Video Title</h3>
+      <form action="" method="post" class="flex-btn">
+        <input type="hidden" name="video_id" value="**video_id**"> <a href="update_content.html?get_id=**video_id**" class="option-btn">Update</a>
+        <input type="submit" value="Delete" class="delete-btn" onclick="return confirm('Delete this video?');" name="delete_video">
+      </form>
+      <a href="view_content.html?get_id=**video_id**" class="btn">Watch Video</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Phong Nhung Hân</span> | all rights reserved!
+
+</footer>
+
+<script src="../js/admin_script.js"></script>
+
+</body>
+</html>

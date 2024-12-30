@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Profile</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
+<body>
+   <!---------------------------HEADER------------------------------->
+   <header class="header">
+   
+      <section class="flex">
+   
+         <a href="dashboard.html" class="logo">Admin </a>
+   
+         <form action="search_page.html" method="post" class="search-form">
+            <input type="text" name="search" placeholder="search here..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_btn"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fa-solid fa-circle-half-stroke"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="../images/aa.png" alt="Profile Image">
+            <h3>Teacher Phong Nhung Hân</h3>
+            <span>Web Developer</span>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+            
+         </div>
+   
+      </section>
+   
+   </header>
+
+<div class="side-bar">
+   
+   <div class="close-side-bar">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+         <img src="../images/aa.png" alt="Profile Image">
+         <h3>Teacher Phong Nhung Hân</h3>
+         <span>Web Developer</span>
+         <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="dashboard.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="playlists.html"><i class="fa-solid fa-bars-staggered"></i><span>playlists</span></a>
+      <a href="contents.html"><i class="fas fa-graduation-cap"></i><span>contents</span></a>
+      <a href="comments.html"><i class="fas fa-comment"></i><span>comments</span></a>
+      <a href="#" onclick="return confirm('logout from this website?');"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
+   </nav>
+
+</div>
+
+<section class="video-form">
+
+   <h1 class="heading">upload content</h1>
+
+   <form action="" method="post" enctype="multipart/form-data">
+      <p>video status <span>*</span></p>
+      <select name="status" class="box" required>
+         <option value="" selected disabled>-- select status</option>
+         <option value="active">active</option>
+         <option value="deactive">deactive</option>
+      </select>
+      <p>video title <span>*</span></p>
+      <input type="text" name="title" maxlength="100" required placeholder="enter video title" class="box">
+      <p>video description <span>*</span></p>
+      <textarea name="description" class="box" required placeholder="write description" maxlength="1000" cols="30" rows="10"></textarea>
+      <p>video playlist <span>*</span></p>
+      <select name="playlist" class="box" required>
+         <option value="" disabled selected>--select playlist</option>
+         <option value="" disabled>no playlist created yet!</option>';
+
+      </select>
+      <p>select thumbnail <span>*</span></p>
+      <input type="file" name="thumb" accept="image/*" required class="box">
+      <p>select video <span>*</span></p>
+      <input type="file" name="video" accept="video/*" required class="box">
+      <input type="submit" value="upload video" name="submit" class="btn">
+   </form>
+
+</section>
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Phong Nhung Hân</span> | all rights reserved!
+
+</footer>
+
+
+<script src="../js/admin_script.js"></script>
+
+</body>
+</html>
